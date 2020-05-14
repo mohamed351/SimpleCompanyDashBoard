@@ -1,0 +1,39 @@
+<!-- <div class="mt-5 container">
+<table class="table table-boraderd ">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Salary</th>
+            <th>Department</th>
+          
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of Employee">
+            <td>{{item.name}}</td>
+       
+            <td>{{item.salary}}</td>
+            <td>{{item.departmentName}}</td>
+            <td>
+                <button class="btn btn-success" (click)="EditEmployee(item.id)">Edit </button>|
+                <button class="btn btn-danger" (click)="DeleteEmployee(item.id)">Delete </button>
+            </td>
+        </tr>
+
+    </tbody>
+
+</table>
+</div>
+
+ -->
+<div class="row mt-3">
+
+    <div class="col-md-5">
+        <app-emp-forms></app-emp-forms>
+    </div>
+
+    <div class="col-md-6">
+        <app-employee-list></app-employee-list>
+    </div>
+
+</div>

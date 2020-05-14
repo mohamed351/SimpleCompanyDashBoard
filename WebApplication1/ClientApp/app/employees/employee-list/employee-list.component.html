@@ -1,0 +1,12 @@
+<table class="table table-hover mt-4 ">
+
+    <tbody>
+    <tr *ngFor="let item of this.emp.EmployeesList">
+        <td>{{item.name}}</td>
+        <td>{{ item.salary}}</td>
+        <td>{{item.departmentName}}</td>
+        <td> <button class="btn btn-danger" (click)="">X</button> </td>
+    </tr>
+</tbody>
+
+</table>

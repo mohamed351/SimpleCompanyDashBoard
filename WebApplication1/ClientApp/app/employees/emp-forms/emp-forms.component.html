@@ -1,0 +1,30 @@
+<form #form="ngForm" (ngSubmit)="SubmitForm(form)">
+  <div class="form-group">
+  
+        <label class="label-control">Name</label>
+        <input required type="text" name="name"  class="form-control" placeholder="Name"  #Name="ngModel" [ngModel]="service.Employee.name"> 
+        <div class="error-message" *ngIf="Name.invalid && Name.touched">
+            The Name is Required
+        </div>
+  </div>
+
+  <div class="form-group">
+  
+    <label class="label-control">Salary</label>
+    <input required type="number" name="Salary"  class="form-control" placeholder="Salary"  #Salary="ngModel" [ngModel]="service.Employee.salary"> 
+    <div class="error-message" *ngIf="Salary.invalid && Salary.touched">
+        The Salary is Required
+    </div>
+</div>
+
+
+<div class="form-group">
+    <label class="label-control">DepartmentID</label>
+    <input  required type="number" name="departmentID"  class="form-control" placeholder="departmentID"  #DepartmentID="ngModel" [ngModel]="service.Employee.departmentID"> 
+    <div class="error-message" *ngIf="DepartmentID.invalid && DepartmentID.touched">
+        The Department is invalid
+    </div>
+</div>
+    
+   <button [disabled]="form.invalid" class="btn btn-success">Submit</button>
+</form>
